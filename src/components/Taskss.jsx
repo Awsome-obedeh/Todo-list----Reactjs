@@ -9,7 +9,7 @@ export default function Taskss({tasks,onToogle,deleteTask}) {
     return (
       <>
         {  tasks.map((task) => {
-          return <Task  task={task}  deleteTask={deleteTask} onToogle={onToogle} ></Task>;
+          return <Task  task={task} deleteTask={deleteTask} onToogle={onToogle} ></Task>;
         })}
       </>
     );
