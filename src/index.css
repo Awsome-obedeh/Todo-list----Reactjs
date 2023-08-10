@@ -67,3 +67,34 @@ input[type="submit"]{
  margin: auto !important;
   color:white !important;
 }
+
+.done{
+  position: relative;
+  
+}
+
+.completed{
+  position:absolute;
+  right: 5px;
+  bottom: 0;
+  background-color: rgba(0, 128, 0, 0.653);
+  padding: 7px;
+  border-radius:8px ;
+  margin: 5px;
+  text-align: center;
+  color: azure;
+  border: 0;
+
+}
+
+.donebtn{
+  position: absolute;
+  bottom: 5px;
+  background-color: blanchedalmond;
+  padding: 8px;
+  right:5px;
+  border: 0;
+  border-radius: 5px;
+  cursor:pointer;
+  color: #0e03033e;
+}

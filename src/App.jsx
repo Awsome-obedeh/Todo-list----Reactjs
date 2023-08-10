@@ -26,6 +26,19 @@ function App() {
       task.id==id ? {...task, reminder:!task.reminder } : task
     }))
   }
+
+  // completed function
+  // function completed(id){
+  //  tasks.map(task=>{
+  //  return (
+  //   setTasks(
+  //     task.id==id ?{...task, completed:task.completed} :task
+  //   )
+
+  //  )
+  //  })
+ 
+  // }
   // tasks.filter(deleteId)
 
   // add task to the tasks array
@@ -59,7 +72,7 @@ function App() {
     <div className="container">
     <button className="btn" onClick={showTask} >{showAddTask ? 'close' :'Add'}</button>
        {showAddTask && <Additems add={add} />} 
-      <Header tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+      <Header tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}  />
       {/* <Taskss tasks={tasks} /> */}
 
     </div>
