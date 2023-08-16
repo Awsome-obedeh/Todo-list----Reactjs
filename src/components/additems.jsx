@@ -2,15 +2,15 @@ import { useState } from "react"
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export default function({add}){
-    const [text,setText]=useState();
-    const [day,setDay]=useState();
-    const [reminder,setReminder]=useState();
+    const [text,setText]=useState('');
+    const [day,setDay]=useState('');
+    const [reminder,setReminder]=useState('');
     
     function submit(e){
         e.preventDefault();
         
         //form validation
-        if(text===undefined){
+        if(text===''){
             alert('Add a task');
             return
         }

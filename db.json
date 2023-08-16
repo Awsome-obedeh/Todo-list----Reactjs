@@ -1,26 +1,23 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "doctors Appointement",
-      "day": "feb 15th at 2:30am",
-      "completed":false,
-      "reminder": false
-    },
-    {
       "id": 2,
       "text": "Meeting at school",
       "day": "feb 6th at 1:30am",
-      "completed":false,
+      "completed": false,
       "reminder": true
     },
     {
-      "id": 3,
-      "text": "Food Shopping",
-      "day": "Feb 5th at 5:30pm",
-      "completed":false,
-      "reminder": true
+      "text": "new task",
+      "day": "1",
+      "reminder": "",
+      "id": 3
+    },
+    {
+      "text": "go to cds",
+      "day": "9/8/23",
+      "reminder": false,
+      "id": 4
     }
   ]
-  
 }

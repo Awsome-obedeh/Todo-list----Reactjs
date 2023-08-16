@@ -14,8 +14,9 @@ function App() {
   function showTask(){
     setshowAddTask(prevMode=>!prevMode)
   }
-  // deleting an array
- const deleteTask= function deleteId(id){
+  // deleting a todo
+ const deleteTask=async function deleteId(id){
+   await fetch(`http://localhost:5000/tasks/${id}`,{method:'DELETE'})
    setTasks(tasks.filter((task)=>task.id  !==id))
   }
 
@@ -42,18 +43,29 @@ function App() {
   // tasks.filter(deleteId)
 
   // add task to the tasks array
-  function  add(task) {
-    // create an  id for new task
-   let id=Math.floor(Math.random()*1000) +1
-  const newTask={id, ...task}
+  async function add(task) {
+
+    const response= await fetch("http://localhost:5000/tasks", {method:"POST",
+      headers: {'Content-type':'application/json'},
+      body:JSON.stringify(task)
+    })
+
+    const data= await response.json();
+    setTasks([...tasks, data])
+
 
     
-      setTasks([...tasks, newTask]);
-      console.log(id);
+    // create an  id for new task
+  //  let id=Math.floor(Math.random()*1000) +1
+  // const newTask={id, ...task}
+
+    
+  //     setTasks([...tasks, newTask]);
+  //     console.log(id);
   }
 
   // use effect 
-  // fetcch record from FaDatabase
+  // fetch record from FaDatabase
   URL="http://localhost:5000/tasks"
   async function fetchTasks(){
     const response= await fetch(URL);
